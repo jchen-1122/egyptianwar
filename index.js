@@ -20,8 +20,8 @@ let deck = ["2C", "2D", "2H", "2S",
               "KC", "KD", "KH", "KS",
               "AC", "AD", "AH", "AS"];
 
-let playerHand = []; //["QC", "QD", "9C", "9D", "9H", "9S",];
-let dealerHand = []; //["QS", "KD", "7D", "5D", "5H"];
+let playerHand = [];
+let dealerHand = [];
 let currentHand = [];
 let player0Expected = 0;
 let player1Expected = 0;
@@ -166,7 +166,8 @@ const uiController = () => {
                 if (cardValue(currentHand[currentHand.length - 1]) === cardValue(currentHand[currentHand.length - 2])) {
                     return true;
                 }
-            } else if (currentHand.length >= 3) {
+            }
+            if (currentHand.length >= 3) {
                 if (cardValue(currentHand[currentHand.length - 1]) === cardValue(currentHand[currentHand.length - 3])) {
                     return true;
                 }
