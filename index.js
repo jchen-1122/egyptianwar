@@ -20,8 +20,8 @@ let deck = ["2C", "2D", "2H", "2S",
               "KC", "KD", "KH", "KS",
               "AC", "AD", "AH", "AS"];
 
-let playerHand = ["QC", "QD", "9C", "9D", "9H", "9S",];
-let dealerHand = ["QS", "KD", "7D", "5D", "5H"];
+let playerHand = []; //["QC", "QD", "9C", "9D", "9H", "9S",];
+let dealerHand = []; //["QS", "KD", "7D", "5D", "5H"];
 let currentHand = [];
 let player0Expected = 0;
 let player1Expected = 0;
@@ -53,8 +53,8 @@ const cardFunctions = () => {
 
         return {
             init: () => {
-                //shuffle();
-                //populateDecks();
+                shuffle();
+                populateDecks();
             },
             getTopCardPlayer: () => {
                 const top = playerHand[0];
