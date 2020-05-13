@@ -162,15 +162,8 @@ const uiController = () => {
             elements.message.textContent = `Player 1 Hand: ${playerHand.length} | Player 2 Hand: ${dealerHand.length} | Current Hand: ${currentHand.length}`;
         },
         checkSlap: () => {
-            if (currentHand.length >= 2) {
-                if (cardValue(currentHand[currentHand.length - 1]) === cardValue(currentHand[currentHand.length - 2])) {
-                    return true;
-                }
-            }
-            if (currentHand.length >= 3) {
-                if (cardValue(currentHand[currentHand.length - 1]) === cardValue(currentHand[currentHand.length - 3])) {
-                    return true;
-                }
+            if (cardValue(currentHand[currentHand.length - 1]) === cardValue(currentHand[currentHand.length - 2]) || cardValue(currentHand[currentHand.length - 1]) === cardValue(currentHand[currentHand.length - 3])) {
+                return true;
             }
             return false;
         }
